@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combined Animated Background and Button Hover Animation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=Oswald:wght@200&family=Share+Tech+Mono&family=Vina+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/css/demo.css'>
+  <link rel="stylesheet" href="static/style2.css">
+  <style>
+    /* Additional styles for the navigation bar */
+    html {
+      height: 100%;
+      background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
+    }
+
+    nav {
+      position: absolute;
+      top: 0.1%;
+      left: 10%;
+      transform: translateX(-50%);
+      z-index: 2;
+      max-width: 2000px;
+      mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+      margin: 0 auto;
+      padding: 40px 0;
+      font-family: "Handjet", cursive;
+      color: white;
+    }
+
+    nav ul {
+      text-align: center;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      padding: 30px 20px;
+      text-transform: uppercase;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.1);
+      color: gold;
+    }
+
+    /* Additional styles for the button text */
+    .btn {
+      font-family: "Vina Sans", sans-serif; /* Use Vina Sans font for the button text */
+    }
+
+    /* You can use .data-container2 .btn to apply the font only to the second button */
+    /* .data-container2 .btn {
+      font-family: "Vina Sans", sans-serif;
+    } */
+  </style>
+</head>
+<body>
+<!-- Animated Background -->
+<div id="large-header" class="large-header">
+  <canvas id="demo-canvas"></canvas>
+  <div class="logo-container">
+    <img src="{{url_for('static', filename='logo.png')}}" alt="OracleDelph AI Logo" width="150"> <!-- Insert the logo image here -->
+    <h1><span>Law</span><span>Chatbots</span></h1>
+  </div>
+
+  <!-- Button Hover Animation -->
+  <div class="data-container">
+    <a href="https://oracledelphailaw.streamlit.app/" class="btn">Document Upload Chatbot</a>
+  </div>
+  <div class="data-container2">
+    <a href="https://oracledelphaidraft.streamlit.app/" class="btn">Legal Document Chatbot</a>
+  </div>
+</div>
+
+
+
+<!-- Navigation Bar -->
+<nav>
+  <ul>
+    <li>
+      <a href="#">Home</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- JavaScript for Animated Background -->
+<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
+<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
+<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js'></script>
+<script src="static/script2.js"></script>
+
+</body>
+</html>
